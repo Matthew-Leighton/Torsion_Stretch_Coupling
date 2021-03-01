@@ -25,36 +25,12 @@ def Psi_Array(psi0_array,lambda_value,zeta):
 
 ##### Computes D-band Strain as a function of psi0, lambda, and zeta
 
-def DBandStrain(psi0_array,r_array,lambda_array, zeta):
-	n = len(lambda_array)
-	epsilonD_array = np.zeros(n)
+def DBandStrain(mean_psi0_squared,lambda_array,zeta):
+	a = ((zeta-1)/(zeta*lambda_array**(3/2) - lambda_array**(-3/2)))
+	return 1/2 * (1 - a**2)*mean_psi0_squared
 
-	for j in range(n):
-		psi_array = Psi_Array(psi0_array,lambda_array[j],zeta)
-
-		mean_cos4_psi = 0
-		mean_cos2_psi = 0
-		mean_cos4_psi0 = 0
-		mean_cos2_psi0 = 0
-
-		for i in range(len(r_array)-1):
-			mean_cos2_psi += r_array[i+1]*(np.cos(psi_array[i+1])**2)* (r_array[i+1] - r_array[i])
-			mean_cos4_psi += r_array[i+1]*(np.cos(psi_array[i+1])**4)* (r_array[i+1] - r_array[i])
-			mean_cos2_psi0 += r_array[i+1]*(np.cos(psi0_array[i+1])**2)* (r_array[i+1] - r_array[i])
-			mean_cos4_psi0 += r_array[i+1]*(np.cos(psi0_array[i+1])**4)* (r_array[i+1] - r_array[i])
-
-		mean_cos2_psi *= 2/(r_array[-1]**2)
-		mean_cos4_psi *= 2/(r_array[-1]**2)
-		mean_cos2_psi0 *= 2/(r_array[-1]**2)
-		mean_cos4_psi0 *= 2/(r_array[-1]**2)
-
-		x = mean_cos4_psi * mean_cos2_psi0 / (mean_cos2_psi * mean_cos4_psi0)
-		epsilonD_value = np.sqrt(x)-1
-
-		epsilonD_array[j] = epsilonD_value
-
-
-	return epsilonD_array
+def psi_D(epsilon_D,psi0,psi0squared):
+	return psi0 * np.sqrt(1 - 2*epsilon_D/psi0squared)
 
 
 
@@ -68,64 +44,62 @@ def PlotFig1():
 	lambda_array = np.linspace(1,1.1,num=n)
 	epsilonF_array = lambda_array-1
 
-	#Unstrained Twist Functions:
-	r_array = np.linspace(0,1,num=N)
-	psi0_const_array = np.ones(N)*0.1
-	psi0_lin_array = 0.3*r_array
-	psi0_tanh_array = 0.3*np.tanh(2*r_array)
+	# A) Stuff
+	bellepsilondata=np.array([0,0.1,0.24,0.3])
+	belltwistdata = np.array([16,14,12,11])*np.pi/180
+	psierror = [np.pi/180,np.pi/180,np.pi/180,np.pi/180]
+	epsilonerror = [0,0.065,0.035,0.055]
+
+	epsilon_D_list = np.linspace(0,0.01,num=10000)
+	psi0=16*np.pi/180
+	mean_psi0_squaredlist = [0.005,0.01,0.02,0.04]#,0.12,0.16]
+
 
 	# For each twist function we'll show three zeta values:
-	zeta_array = np.array([1.1,1.3,1.5])
-	ls_list = ['-','--','-.']
-	lw_list = [2,2.5,3]
-	color_list = ['black','blue','xkcd:orange']
+	zeta_array = np.array([1.1,1.3,1.5,1.7])
+	ls_list = ['-','--','-.',':']
+	lw_list = [2,2.5,3,3.5]
+	color_list = ['black','blue','xkcd:orange','xkcd:red']
 
 
 	# Figure Setup
 	fig=plt.figure()
-	gs=gridspec.GridSpec(1,3,width_ratios=[1,1,1],height_ratios=[1])
+	gs=gridspec.GridSpec(1,2,width_ratios=[1,1],height_ratios=[1])
 	ax1=plt.subplot(gs[0])
 	ax2=plt.subplot(gs[1])
-	ax3=plt.subplot(gs[2])
 	ax1.minorticks_on()
 	ax2.minorticks_on()
-	ax3.minorticks_on()
+
+	for i in range(len(mean_psi0_squaredlist)):
+		ax1.plot(100*epsilon_D_list,psi_D(epsilon_D_list,psi0,mean_psi0_squaredlist[i]),label=r'$\langle\psi_0^2\rangle =$'+str(mean_psi0_squaredlist[i]),ls=ls_list[i],color=color_list[i],lw=lw_list[i])
+	ax1.errorbar(bellepsilondata,belltwistdata,yerr = psierror,xerr = epsilonerror,color='tab:green',lw=3,zorder=1)
 
 
+	mean_psi0_squared=0.01
 	for i in range(len(zeta_array)):
-		zeta = zeta_array[i]
-		ax1.plot(100*(lambda_array-1),100*DBandStrain(psi0_const_array,r_array,lambda_array,zeta),label='$\zeta = $'+str(zeta),lw=lw_list[i],ls=ls_list[i],color = color_list[i])
-		ax2.plot(100*(lambda_array-1),100*DBandStrain(psi0_lin_array,r_array,lambda_array,zeta),lw=lw_list[i],ls=ls_list[i],color = color_list[i])
-		ax3.plot(100*(lambda_array-1),100*DBandStrain(psi0_tanh_array,r_array,lambda_array,zeta),lw=lw_list[i],ls=ls_list[i],color = color_list[i])
+		ax2.plot(100*epsilonF_array,100*DBandStrain(mean_psi0_squared,lambda_array,zeta_array[i]),label='$\zeta=$'+str(zeta_array[i]),ls=ls_list[i],color=color_list[i],lw=lw_list[i])
 
 
-
-	ax1.set_xlabel('Fibril Strain (\%)',fontsize=16)
-	ax1.set_ylabel('D-Band Strain (\%)',fontsize=16)
-	ax1.set_xlim(0,10)
-	ax1.set_ylim(0,)
-	ax1.set_title('$\psi_0(r) = 0.1$',fontsize=16)
+	ax1.set_ylabel(r'$\langle \psi\rangle$',fontsize=16)
+	ax1.set_xlabel('D-Band Strain (\%)',fontsize=16)
+	ax1.set_xlim(0,1)
+	ax1.set_ylim(0,0.4)
+	ax1.set_title('A)',loc='left',fontsize=16)
 	ax1.legend(loc='best',fontsize=14)
 
 	ax2.set_xlabel('Fibril Strain (\%)',fontsize=16)
+	ax2.set_ylabel('D-Band Strain (\%)',fontsize=16)
 	#ax2.set_ylabel('D-Band Strain (\%)',fontsize=16)
 	ax2.set_xlim(0,10)
 	ax2.set_ylim(0,)
-	ax2.set_title('$\psi_0(r) = 0.3r/R$',fontsize=16)
-
-	ax3.set_xlabel('Fibril Strain (\%)',fontsize=16)
-	#ax3.set_ylabel('D-Band Strain (\%)',fontsize=16)
-	ax3.set_xlim(0,10)
-	ax3.set_ylim(0,)
-	ax3.set_title(r'$\psi_0(r) = 0.3\tanh(2r/R)$',fontsize=16)
+	ax2.legend(loc='best',fontsize=14)
+	ax2.set_title('B)',loc='left',fontsize=16)
 
 
 	ax1.tick_params(axis='x', labelsize=14)
 	ax1.tick_params(axis='y', labelsize=14)
 	ax2.tick_params(axis='x', labelsize=14)
 	ax2.tick_params(axis='y', labelsize=14)
-	ax3.tick_params(axis='x', labelsize=14)
-	ax3.tick_params(axis='y', labelsize=14)
 
 	plt.tight_layout(pad=0.5)
 	plt.show()
