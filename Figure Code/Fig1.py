@@ -24,13 +24,28 @@ def Psi_Array(psi0_array,lambda_value,zeta):
 
 
 ##### Computes D-band Strain as a function of psi0, lambda, and zeta
-
+ 
 def DBandStrain(mean_psi0_squared,lambda_array,zeta):
 	a = ((zeta-1)/(zeta*lambda_array**(3/2) - lambda_array**(-3/2)))
 	return 1/2 * (1 - a**2)*mean_psi0_squared
 
 def psi_D(epsilon_D,psi0,psi0squared):
+
 	return psi0 * np.sqrt(1 - 2*epsilon_D/psi0squared)
+
+
+def DBandStrain_ZetaInfty(lambda_array,mean_psi0_squared):
+	return (1/2)*(1 - 1/lambda_array**3)*mean_psi0_squared
+
+def DBandStrain_ZetaOne(lambda_array,mean_psi0_squared):
+	N = len(lambda_array)
+	Dbandstrain = np.zeros(N)
+
+	for i in range(N):
+		if i>0:
+			Dbandstrain[i] = mean_psi0_squared/2
+
+	return Dbandstrain
 
 
 
@@ -40,7 +55,7 @@ def PlotFig1():
 
 	#Parameters
 	N=1000
-	n=100
+	n=1000
 	lambda_array = np.linspace(1,1.1,num=n)
 	epsilonF_array = lambda_array-1
 
@@ -50,13 +65,17 @@ def PlotFig1():
 	psierror = [np.pi/180,np.pi/180,np.pi/180,np.pi/180]
 	epsilonerror = [0,0.065,0.035,0.055]
 
+	bellfdata = np.array([1,14/16,12/16,11/16])
+	bellferror = np.array([np.sqrt(2)/16,np.sqrt((14/16)**2 + 1)/16,np.sqrt((12/16)**2 + 1)/16,np.sqrt((11/16)**2 + 1)/16])
+
+
 	epsilon_D_list = np.linspace(0,0.01,num=10000)
 	psi0=16*np.pi/180
 	mean_psi0_squaredlist = [0.005,0.01,0.02,0.04]#,0.12,0.16]
 
 
 	# For each twist function we'll show three zeta values:
-	zeta_array = np.array([1.1,1.3,1.5,1.7])
+	zeta_array = np.array([1.1,1.3,1.5])
 	ls_list = ['-','--','-.',':']
 	lw_list = [2,2.5,3,3.5]
 	color_list = ['black','blue','xkcd:orange','xkcd:red']
@@ -71,19 +90,24 @@ def PlotFig1():
 	ax2.minorticks_on()
 
 	for i in range(len(mean_psi0_squaredlist)):
-		ax1.plot(100*epsilon_D_list,psi_D(epsilon_D_list,psi0,mean_psi0_squaredlist[i]),label=r'$\langle\psi_0^2\rangle =$'+str(mean_psi0_squaredlist[i]),ls=ls_list[i],color=color_list[i],lw=lw_list[i])
-	ax1.errorbar(bellepsilondata,belltwistdata,yerr = psierror,xerr = epsilonerror,color='tab:green',lw=3,zorder=1)
+		ax1.plot(100*epsilon_D_list,psi_D(epsilon_D_list,psi0,mean_psi0_squaredlist[i])/psi0,label=r'$\langle\psi_0^2\rangle =$'+str(mean_psi0_squaredlist[i]),ls=ls_list[i],color=color_list[i],lw=lw_list[i])
+	#ax1.errorbar(bellepsilondata,belltwistdata,yerr = psierror,xerr = epsilonerror,color='tab:green',lw=3,zorder=1)
+	ax1.errorbar(bellepsilondata,bellfdata,yerr = bellferror,xerr = epsilonerror,color='tab:green',lw=3,zorder=1)
 
 
 	mean_psi0_squared=0.01
+
+	ax2.plot(100*epsilonF_array,100*DBandStrain_ZetaOne(lambda_array,mean_psi0_squared),label=r'$\zeta\to1$',lw=1.5,ls = '-.',color='xkcd:green')
+
 	for i in range(len(zeta_array)):
 		ax2.plot(100*epsilonF_array,100*DBandStrain(mean_psi0_squared,lambda_array,zeta_array[i]),label='$\zeta=$'+str(zeta_array[i]),ls=ls_list[i],color=color_list[i],lw=lw_list[i])
 
+	ax2.plot(100*epsilonF_array,100*DBandStrain_ZetaInfty(lambda_array,mean_psi0_squared),label=r'$\zeta\to\infty$',lw=1.5,ls = ':',color='xkcd:red')
 
-	ax1.set_ylabel(r'$\langle \psi\rangle$',fontsize=16)
+	ax1.set_ylabel(r'$\langle \psi\rangle/\langle\psi_0\rangle$',fontsize=16)
 	ax1.set_xlabel('D-Band Strain (\%)',fontsize=16)
 	ax1.set_xlim(0,1)
-	ax1.set_ylim(0,0.4)
+	ax1.set_ylim(0,1.3)
 	ax1.set_title('A)',loc='left',fontsize=16)
 	ax1.legend(loc='best',fontsize=14)
 
