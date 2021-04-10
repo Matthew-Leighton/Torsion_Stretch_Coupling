@@ -73,6 +73,7 @@ def PlotFig1():
 	psi0_const_array = np.ones(N)*0.3
 	psi0_lin_array = 0.3*r_array
 	psi0_tanh_array = 0.3*np.tanh(2*r_array)
+	psi0_data_array = 0.3*r_array**8
 
 	# For each twist function we'll show three zeta values:
 	zeta_array = np.array([1.1,1.3,1.5])
@@ -83,13 +84,15 @@ def PlotFig1():
 
 	# Figure Setup
 	fig=plt.figure()
-	gs=gridspec.GridSpec(1,3,width_ratios=[1,1,1],height_ratios=[1])
+	gs=gridspec.GridSpec(2,2,width_ratios=[1,1],height_ratios=[1,1])
 	ax1=plt.subplot(gs[0])
 	ax2=plt.subplot(gs[1])
 	ax3=plt.subplot(gs[2])
+	ax4=plt.subplot(gs[3])
 	ax1.minorticks_on()
 	ax2.minorticks_on()
 	ax3.minorticks_on()
+	ax4.minorticks_on()
 
 
 	for i in range(len(zeta_array)):
@@ -97,27 +100,38 @@ def PlotFig1():
 		ax1.plot(100*(lambda_array-1),100*DBandStrain(psi0_const_array,r_array,lambda_array,zeta),label='$\zeta = $'+str(zeta),lw=lw_list[i],ls=ls_list[i],color = color_list[i])
 		ax2.plot(100*(lambda_array-1),100*DBandStrain(psi0_lin_array,r_array,lambda_array,zeta),lw=lw_list[i],ls=ls_list[i],color = color_list[i])
 		ax3.plot(100*(lambda_array-1),100*DBandStrain(psi0_tanh_array,r_array,lambda_array,zeta),lw=lw_list[i],ls=ls_list[i],color = color_list[i])
+		ax4.plot(100*(lambda_array-1),100*DBandStrain(psi0_data_array,r_array,lambda_array,zeta),lw=lw_list[i],ls=ls_list[i],color = color_list[i])
 
 
 
-	ax1.set_xlabel('Fibril Strain (\%)',fontsize=16)
+	#ax1.set_xlabel('Fibril Strain (\%)',fontsize=16)
+	ax1.set_title('A)',loc='left',fontsize=16)
 	ax1.set_ylabel('D-Band Strain (\%)',fontsize=16)
 	ax1.set_xlim(0,10)
 	ax1.set_ylim(0,)
 	ax1.set_title('$\psi_0(r) = 0.3$',fontsize=16)
 	ax1.legend(loc='best',fontsize=14)
 
-	ax2.set_xlabel('Fibril Strain (\%)',fontsize=16)
+	#ax2.set_xlabel('Fibril Strain (\%)',fontsize=16)
 	#ax2.set_ylabel('D-Band Strain (\%)',fontsize=16)
+	ax2.set_title('B)',loc='left',fontsize=16)
 	ax2.set_xlim(0,10)
 	ax2.set_ylim(0,)
 	ax2.set_title('$\psi_0(r) = 0.3r/R$',fontsize=16)
 
+	ax3.set_title('C)',loc='left',fontsize=16)
 	ax3.set_xlabel('Fibril Strain (\%)',fontsize=16)
-	#ax3.set_ylabel('D-Band Strain (\%)',fontsize=16)
+	ax3.set_ylabel('D-Band Strain (\%)',fontsize=16)
 	ax3.set_xlim(0,10)
 	ax3.set_ylim(0,)
 	ax3.set_title(r'$\psi_0(r) = 0.3\tanh(2r/R)$',fontsize=16)
+
+	ax4.set_title('D)',loc='left',fontsize=16)
+	ax4.set_xlabel('Fibril Strain (\%)',fontsize=16)
+	#ax3.set_ylabel('D-Band Strain (\%)',fontsize=16)
+	ax4.set_xlim(0,10)
+	ax4.set_ylim(0,)
+	ax4.set_title(r'$\psi_0(r) = 0.3(r/R)^8$',fontsize=16)
 
 
 	ax1.tick_params(axis='x', labelsize=14)
@@ -126,6 +140,8 @@ def PlotFig1():
 	ax2.tick_params(axis='y', labelsize=14)
 	ax3.tick_params(axis='x', labelsize=14)
 	ax3.tick_params(axis='y', labelsize=14)
+	ax4.tick_params(axis='x', labelsize=14)
+	ax4.tick_params(axis='y', labelsize=14)
 
 	plt.tight_layout(pad=0.5)
 	plt.show()
