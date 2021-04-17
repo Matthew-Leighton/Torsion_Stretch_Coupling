@@ -68,6 +68,11 @@ def PlotFig1():
 	bellfdata = np.array([1,14/16,12/16,11/16])
 	bellferror = np.array([np.sqrt(2)/16,np.sqrt((14/16)**2 + 1)/16,np.sqrt((12/16)**2 + 1)/16,np.sqrt((11/16)**2 + 1)/16])
 
+	#B) data
+	bell_eD_data = np.array([0,0.1,0.24,0.3,0.588]) #percent
+	bell_eD_error = np.array([0,0.065,0.035,0.055,0.084]) #percent
+	bell_eTissue_data = 100*np.array([0,0.014,0.028,0.05,0.08]) # percent
+	bell_eTissue_error = np.array([0,0.3,0.3,0.3,0.3]) #percent
 
 	epsilon_D_list = np.linspace(0,0.01,num=10000)
 	psi0=16*np.pi/180
@@ -89,34 +94,46 @@ def PlotFig1():
 	ax1.minorticks_on()
 	ax2.minorticks_on()
 
+	# Fig 1A lines and data
+
 	for i in range(len(mean_psi0_squaredlist)):
 		ax1.plot(100*epsilon_D_list,psi_D(epsilon_D_list,psi0,mean_psi0_squaredlist[i])/psi0,label=r'$\langle\psi_0^2\rangle =$'+str(mean_psi0_squaredlist[i]),ls=ls_list[i],color=color_list[i],lw=lw_list[i])
 	#ax1.errorbar(bellepsilondata,belltwistdata,yerr = psierror,xerr = epsilonerror,color='tab:green',lw=3,zorder=1)
-	ax1.errorbar(bellepsilondata,bellfdata,yerr = bellferror,xerr = epsilonerror,color='tab:green',lw=3,zorder=1)
+	ax1.errorbar(bellepsilondata,bellfdata,yerr = bellferror,xerr = epsilonerror,color='tab:green',lw=3,zorder=1,ls='none')
 
 
+	# Best fit <psi_0^2>
 	mean_psi0_squared=0.01
 
-	ax2.plot(100*epsilonF_array,100*DBandStrain_ZetaOne(lambda_array,mean_psi0_squared),label=r'$\zeta\to1$',lw=1.5,ls = '-.',color='xkcd:green')
+
+	# Fig 1B lines and data
+
+	ax2.plot(100*epsilonF_array,100*DBandStrain_ZetaOne(lambda_array,mean_psi0_squared),label=r'$\zeta\to1^+$',lw=1.5,ls = '-.',color='xkcd:green')
 
 	for i in range(len(zeta_array)):
 		ax2.plot(100*epsilonF_array,100*DBandStrain(mean_psi0_squared,lambda_array,zeta_array[i]),label='$\zeta=$'+str(zeta_array[i]),ls=ls_list[i],color=color_list[i],lw=lw_list[i])
 
 	ax2.plot(100*epsilonF_array,100*DBandStrain_ZetaInfty(lambda_array,mean_psi0_squared),label=r'$\zeta\to\infty$',lw=1.5,ls = ':',color='xkcd:red')
 
+	ax2.errorbar(bell_eTissue_data,bell_eD_data,yerr = bell_eD_error,xerr = bell_eTissue_error,color='tab:green',lw=3,zorder=1,ls='none')
+
+
+	# Figure Niceness Stuff
+
 	ax1.set_ylabel(r'$\langle \psi\rangle/\langle\psi_0\rangle$',fontsize=16)
 	ax1.set_xlabel('D-Band Strain (\%)',fontsize=16)
 	ax1.set_xlim(0,1)
 	ax1.set_ylim(0,1.3)
 	ax1.set_title('A)',loc='left',fontsize=16)
-	ax1.legend(loc='best',fontsize=14)
+	ax1.legend(loc='best',fontsize=14,frameon=False)
 
 	ax2.set_xlabel('Fibril Strain (\%)',fontsize=16)
+	#ax2.set_ylabel(r'$\varepsilon_D/\langle\psi_0^2\rangle$',fontsize=16)
 	ax2.set_ylabel('D-Band Strain (\%)',fontsize=16)
 	#ax2.set_ylabel('D-Band Strain (\%)',fontsize=16)
 	ax2.set_xlim(0,10)
-	ax2.set_ylim(0,)
-	ax2.legend(loc='best',fontsize=14)
+	ax2.set_ylim(0,0.75)
+	ax2.legend(loc='best',fontsize=14,frameon=False)
 	ax2.set_title('B)',loc='left',fontsize=16)
 
 
