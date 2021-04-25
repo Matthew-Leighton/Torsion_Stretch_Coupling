@@ -1,7 +1,7 @@
 # Project: Torsion-Stretch Coupling in Collagen Fibrils
 
 
-This repository contains all the electronic material (code, figures, etc) needed to replicate the findings of the manuscript titled "Chiral phase-coexistence in compressed double-twist elastomers" by Matthew P Leighton, Andrew D Rutenberg, and Laurent Kreplak. In particular, the contents include:
+This repository contains all the electronic material (code, figures, etc) needed to replicate the findings of the manuscript titled "D-band strain underestimates collagen fibril strain" by Matthew P Leighton, Andrew D Rutenberg, and Laurent Kreplak. In particular, the contents include:
 
 ## Figures
 This folder contains pdf copies of the single figure that is included in the manuscript.
