@@ -1,0 +1,242 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Orgel:2006}
+J.~P. Orgel, T.~C. Irving, A.~Miller, T.~J. Wess, Microfibrillar structure of
+  type {I} collagen in situ, Proceedings of the National Academy of Sciences
+  103~(24) (2006) 9001--9005.
+
+\bibitem{Hodge:1960}
+A.~J. Hodge, F.~O. Schmitt, The charge profile of the tropocollagen
+  macromolecule and the packing arrangement in native-type collagen fibrils,
+  Proceedings of the National Academy of Sciences 46~(2) (1960) 186.
+
+\bibitem{Fang:2013}
+M.~Fang, M.~M.~B. Holl, Variation in type {I} collagen fibril nanomorphology:
+  the significance and origin, BoneKEy Reports 2 (2013).
+
+\bibitem{Sasaki:1996}
+N.~Sasaki, S.~Odajima, Stress-strain curve and {Y}oung's modulus of a collagen
+  molecule as determined by the {X}-ray diffraction technique, Journal of
+  Biomechanics 29~(5) (1996) 655--658.
+
+\bibitem{Orgel:2001}
+J.~P. R.~O. Orgel, A.~Miller, T.~C. Irving, R.~F. Fischetti, A.~P. Hammersley,
+  T.~J. Wess, The in situ supermolecular structure of type {I} collagen,
+  Structure 9~(11) (2001) 1061--1069.
+
+\bibitem{Makris:2014}
+E.~A. Makris, D.~J. Responte, N.~K. Paschos, J.~C. Hu, K.~A. Athanasiou,
+  Developing functional musculoskeletal tissues through hypoxia and lysyl
+  oxidase-induced collagen cross-linking, Proceedings of the National Academy
+  of Sciences 111~(45) (2014) E4832--E4841.
+
+\bibitem{Misof:1997}
+K.~Misof, G.~Rapp, P.~Fratzl, A new molecular model for collagen elasticity
+  based on synchrotron x-ray scattering evidence, Biophysical Journal 72~(3)
+  (1997) 1376--1381.
+
+\bibitem{Aziz:2018}
+J.~Aziz, M.~F. Ahmad, M.~T. Rahman, N.~A. Yahya, J.~Czernuszka, Z.~Radzi, {AFM}
+  analysis of collagen fibrils in expanded scalp tissue after anisotropic
+  tissue expansion, International Journal of Biological Macromolecules 107
+  (2018) 1030--1038.
+
+\bibitem{Gautieri:2017}
+A.~Gautieri, F.~S. Passini, U.~Silv{\'a}n, M.~Guizar-Sicairos, G.~Carimati,
+  P.~Volpi, M.~Moretti, H.~Schoenhuber, A.~Redaelli, M.~Berli, et~al., Advanced
+  glycation end-products: {M}echanics of aged collagen from molecule to tissue,
+  Matrix Biology 59 (2017) 95--108.
+
+\bibitem{Gachon:2020}
+E.~Gachon, P.~Mesquida, Stretching single collagen fibrils reveals nonlinear
+  mechanical behavior, Biophysical Journal 118~(6) (2020) 1401--1408.
+
+\bibitem{Lous:1983}
+M.~L. Lous, J.-C. Allain, L.~Cohen-solal, P.~Maroteaux, Hydrothermal isometric
+  tension curves from different connective tissues. {R}ole of collagen genetic
+  types and noncollagenous components, Connective Tissue Research 11~(2-3)
+  (1983) 199--206.
+
+\bibitem{Allain:1980}
+J.~Allain, M.~L. Lous, L.~Cohen-Solal, S.~Bazin, P.~Maroteaux, Isometric
+  tensions developed during the hydrothermal swelling of rat skin, Connective
+  Tissue Research 7~(3) (1980) 127--133.
+
+\bibitem{Kampmeier:2000}
+J.~Kampmeier, B.~Radt, R.~Birngruber, R.~Brinkmann, Thermal and biomechanical
+  parameters of porcine cornea, Cornea 19~(3) (2000) 355--363.
+
+\bibitem{Herod:2016}
+T.~W. Herod, N.~C. Chambers, S.~P. Veres, Collagen fibrils in functionally
+  distinct tendons have differing structural responses to tendon rupture and
+  fatigue loading, Acta Biomaterialia 42 (2016) 296--307.
+
+\bibitem{Hulmes:1981}
+D.~Hulmes, J.-C. Jesior, A.~Miller, C.~Berthet-Colominas, C.~Wolff, Electron
+  microscopy shows periodic structure in collagen fibril cross sections,
+  Proceedings of the National Academy of Sciences 78~(6) (1981) 3567--3571.
+
+\bibitem{Quan:2015}
+B.~D. Quan, E.~D. Sone, Structural changes in collagen fibrils across a
+  mineralized interface revealed by cryo-{TEM}, Bone 77 (2015) 42--49.
+
+\bibitem{Raspanti:2018}
+M.~Raspanti, M.~Reguzzoni, M.~Protasoni, P.~Basso, Not only tendons: {T}he
+  other architecture of collagen fibrils, International Journal of Biological
+  Macromolecules 107 (2018) 1668--1674.
+
+\bibitem{Brodsky:1980}
+B.~Brodsky, E.~F. Eikenberry, K.~Cassidy, An unusual collagen periodicity in
+  skin, Biochimica et Biophysica Acta - Protein Structure 621~(1) (1980)
+  162--166.
+
+\bibitem{Cameron:2020}
+S.~Cameron, L.~Kreplak, A.~D. Rutenberg, Phase-field collagen fibrils:
+  {C}oupling chirality and density modulations, Physical Review Research 2~(1)
+  (2020) 012070.
+
+\bibitem{Bozec:2007}
+L.~Bozec, G.~van~der Heijden, M.~Horton, Collagen fibrils: {N}anoscale ropes,
+  Biophysical Journal 92~(1) (2007) 70--75.
+
+\bibitem{Tsuda:1996}
+Y.~Tsuda, H.~Yasutake, A.~Ishijima, T.~Yanagida, Torsional rigidity of single
+  actin filaments and actin--actin bond breaking force under torsion measured
+  directly by in vitro micromanipulation, Proceedings of the National Academy
+  of Sciences 93~(23) (1996) 12937--12942.
+
+\bibitem{Sheinin:2009}
+M.~Y. Sheinin, M.~D. Wang, Twist--stretch coupling and phase transition during
+  {DNA} supercoiling, Physical Chemistry Chemical Physics 11~(24) (2009)
+  4800--4803.
+
+\bibitem{Bell:2018}
+J.~Bell, S.~Hayes, C.~Whitford, J.~Sanchez-Weatherby, O.~Shebanova, C.~Vergari,
+  C.~Winlove, N.~Terrill, T.~Sorensen, A.~Elsheikh, et~al., The hierarchical
+  response of human corneal collagen to load, Acta Biomaterialia 65 (2018)
+  216--225.
+
+\bibitem{Leighton:2021}
+M.~P. Leighton, L.~Kreplak, A.~D. Rutenberg, Non-equilibrium growth and twist
+  of cross-linked collagen fibrils, Soft Matter 17~(5) (2021) 1415--1427.
+
+\bibitem{Warner:1996}
+M.~Warner, E.~Terentjev, Nematic elastomers—a new state of matter?, Progress
+  in Polymer Science 21~(5) (1996) 853--891.
+
+\bibitem{Leighton:2021b}
+M.~P. Leighton, L.~Kreplak, A.~D. Rutenberg, Chiral phase-coexistence in
+  compressed double-twist elastomers, arXiv preprint arXiv:2102.02242 (2021).
+
+\bibitem{Warner:2000}
+M.~Warner, E.~Terentjev, R.~Meyer, Y.~Mao, Untwisting of a cholesteric
+  elastomer by a mechanical field, Physical Review Letters 85~(11) (2000) 2320.
+
+\bibitem{DAllest:1988}
+J.~d'Allest, P.~Maissa, A.~Ten~Bosch, P.~Sixou, A.~Blumstein, R.~Blumstein,
+  J.~Teixeira, L.~Noirez, Experimental evidence of chain extension at the
+  transition temperature of a nematic polymer, Physical Review Letters 61~(22)
+  (1988) 2562.
+
+\bibitem{Kundler:1998}
+I.~Kundler, H.~Finkelmann, Director reorientation via stripe-domains in nematic
+  elastomers: {I}nfluence of cross-link density, anisotropy of the network and
+  smectic clusters, Macromolecular Chemistry and Physics 199~(4) (1998)
+  677--686.
+
+\bibitem{github}
+Github code,
+  \url{https://github.com/Matthew-Leighton/Torsion_Stretch_Coupling}.
+
+\bibitem{Screen:2004}
+H.~Screen, D.~Bader, D.~Lee, J.~Shelton, Local strain measurement within
+  tendon, Strain 40~(4) (2004) 157--163.
+
+\bibitem{Fang:2012}
+M.~Fang, E.~L. Goldstein, A.~S. Turner, C.~M. Les, B.~G. Orr, G.~J. Fisher,
+  K.~B. Welch, E.~D. Rothman, M.~M. Banaszak~Holl, Type {I} collagen
+  {D}-spacing in fibril bundles of dermis, tendon, and bone: {B}ridging between
+  nano-and micro-level tissue hierarchy, ACS Nano 6~(11) (2012) 9503--9514.
+
+\bibitem{Fang:2013B}
+M.~Fang, E.~L. Goldstein, E.~K. Matich, B.~G. Orr, M.~M.~B. Holl, {Type I
+  collagen self-assembly: {T}he roles of substrate and concentration}, Langmuir
+  29~(7) (2013) 2330--2338.
+
+\bibitem{Graham:2004}
+J.~S. Graham, A.~N. Vomund, C.~L. Phillips, M.~Grandbois, {Structural changes
+  in human type I collagen fibrils investigated by force spectroscopy},
+  Experimental Cell Research 299~(2) (2004) 335--342.
+
+\bibitem{Ottani:2001}
+V.~Ottani, M.~Raspanti, A.~Ruggeri, Collagen structure and functional
+  implications, Micron 32~(3) (2001) 251--260.
+
+\bibitem{Mechanic:1987}
+G.~L. Mechanic, E.~P. Katz, M.~Henmi, C.~Noyes, M.~Yamauchi, Locus of a
+  histidine-based, stable trifunctional, helix to helix collagen cross-link:
+  {S}tereospecific collagen structure of type {I} skin fibrils, Biochemistry
+  26~(12) (1987) 3500--3509.
+
+\bibitem{Yang:2015}
+W.~Yang, V.~R. Sherman, B.~Gludovatz, E.~Schaible, P.~Stewart, R.~O. Ritchie,
+  M.~A. Meyers, On the tear resistance of skin, Nature Communications 6~(1)
+  (2015) 1--10.
+
+\bibitem{Quigley:2018}
+A.~S. Quigley, S.~Bancelin, D.~Deska-Gauthier, F.~L{\'e}gar{\'e}, L.~Kreplak,
+  S.~P. Veres, In tendons, differing physiological requirements lead to
+  functionally distinct nanostructures, Scientific Reports 8~(1) (2018) 1--14.
+
+\bibitem{Svensson:2013}
+R.~B. Svensson, H.~Mulder, V.~Kovanen, S.~P. Magnusson, Fracture mechanics of
+  collagen fibrils: {I}nfluence of natural cross-links, Biophysical Journal
+  104~(11) (2013) 2476--2484.
+
+\bibitem{Peacock:2019}
+C.~J. Peacock, L.~Kreplak, Nanomechanical mapping of single collagen fibrils
+  under tension, Nanoscale 11~(30) (2019) 14417--14425.
+
+\bibitem{Iqbal:2019}
+S.~A. Iqbal, D.~Deska-Gauthier, L.~Kreplak, Assessing collagen fibrils
+  molecular damage after a single stretch--release cycle, Soft Matter 15~(30)
+  (2019) 6237--6246.
+
+\bibitem{Fratzl:1998}
+P.~Fratzl, K.~Misof, I.~Zizak, G.~Rapp, H.~Amenitsch, S.~Bernstorff, Fibrillar
+  structure and mechanical properties of collagen, Journal of Structural
+  Biology 122~(1-2) (1998) 119--122.
+
+\bibitem{Ross:2020}
+C.~J. Ross, J.~Zheng, L.~Ma, Y.~Wu, C.-H. Lee, Mechanics and microstructure of
+  the atrioventricular heart valve chordae tendineae: a review, Bioengineering
+  7~(1) (2020) 25.
+
+\bibitem{Millington:1998}
+C.~Millington-Sanders, A.~Meir, L.~Lawrence, C.~Stolinski, Structure of chordae
+  tendineae in the left ventricle of the human heart, Journal of Anatomy
+  192~(4) (1998) 573--581.
+
+\bibitem{Folkhard:1987}
+W.~Folkhard, D.~Christmann, W.~Geercken, E.~Kn{\"o}rzer, M.~H. Koch, E.~Mosler,
+  H.~Nemetschek-Gansler, T.~Nemetschek, Twisted fibrils are a structural
+  principle in the assembly of interstitial collagens, chordae tendineae
+  included, Zeitschrift f{\"u}r Naturforschung C 42~(11-12) (1987) 1303--1306.
+
+\bibitem{Kreplak:2002}
+L.~Kreplak, A.~Franbourg, F.~Briki, F.~Leroy, D.~Dalle, J.~Doucet, A new
+  deformation model of hard $\alpha$-keratin fibers at the nanometer scale:
+  {I}mplications for hard $\alpha$-keratin intermediate filament mechanical
+  properties, Biophysical Journal 82~(4) (2002) 2265--2274.
+
+\bibitem{Harland:2014}
+D.~P. Harland, R.~J. Walls, J.~A. Vernon, J.~M. Dyer, J.~L. Woods, F.~Bell,
+  Three-dimensional architecture of macrofibrils in the human scalp hair
+  cortex, Journal of Structural Biology 185~(3) (2014) 397--404.
+
+\end{thebibliography}
