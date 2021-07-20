@@ -5,6 +5,8 @@ import matplotlib.gridspec as gridspec
 rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
 rc('text', usetex=True)
 
+plt.style.use('Leighton_Style_Colors2')
+
 
 ##### Functions for computing twist and dband strain in the small-angle limit:
 
@@ -60,7 +62,7 @@ psi0=16*np.pi/180
 mean_psi0_squaredlist = [0.005,0.01,0.02,0.04]
 
 # List of zeta values to show:
-zeta_array = np.array([1.1,1.3,1.5])
+zeta_array = np.array([1.1,1.2,1.3])
 
 
 ##### Digitized data from Bell et al, 2018:
@@ -84,8 +86,13 @@ bell_twist_error = np.array([0,np.sqrt((14/16)**2 + 1)/16,np.sqrt((12/16)**2 + 1
 def PlotFig1():
 
 	##### Figure Setup
-	fig=plt.figure()
-	gs=gridspec.GridSpec(1,2,width_ratios=[1,1],height_ratios=[1],left=0.083,bottom=0.112,right=0.985,top=0.926,wspace=0.315)
+
+	width = 8.6
+	height = 9
+
+
+	fig=plt.figure(figsize=(2*width/2.54,height/2.54))
+	gs=gridspec.GridSpec(1,2,width_ratios=[1,1],height_ratios=[1])#,left=0.083,bottom=0.112,right=0.985,top=0.926,wspace=0.315)
 	ax1=plt.subplot(gs[0])
 	ax2=plt.subplot(gs[1])
 	ax1.minorticks_on()
@@ -119,35 +126,38 @@ def PlotFig1():
 	ax2.plot(100*epsilonF_array,DBandStrain_ZetaInfty(lambda_array,mean_psi0_squared)/mean_psi0_squared,lw=1.5,ls = ':',color='xkcd:red')#,label=r'$\zeta\to\infty$')
 
 	# Bell Data:
-	ax2.errorbar(bell_eTissue_data,bell_eD_data/100 /mean_psi0_squared,yerr = bell_eD_error/100 /mean_psi0_squared,xerr = bell_eTissue_error,color='tab:green',lw=3,zorder=1,ls='none',fmt='o')
+	ax2.errorbar(bell_eTissue_data,bell_eD_data/100 /mean_psi0_squared,yerr = bell_eD_error/100 /mean_psi0_squared,xerr = bell_eTissue_error,color='tab:green',lw=3,zorder=10,ls='none',fmt='o')
+
+	#ax2.errorbar(bell_eTissue_data*0.5,bell_eD_data/100 /mean_psi0_squared,yerr = bell_eD_error/100 /mean_psi0_squared,xerr = bell_eTissue_error,color='tab:green',lw=1.5,zorder=1,ls='none',fmt='o')
+	ax2.scatter(bell_eTissue_data*0.5,bell_eD_data/100 /mean_psi0_squared,color='lawngreen',marker='*',zorder=9,s=140)
 
 
 
 	##### Figure Labels/Legends/Formatting Stuff
 
-	ax1.set_ylabel(r'$\langle \psi\rangle/\langle\psi_0\rangle$',fontsize=20)
-	ax1.set_xlabel('D-Band Strain (\%)',fontsize=16)
+	ax1.set_ylabel(r'$\langle \psi\rangle/\langle\psi_0\rangle$')
+	ax1.set_xlabel('D-Band Strain (\%)')
 	ax1.set_xlim(0,1)
 	ax1.set_ylim(0,1.3)
-	ax1.set_title('A)',loc='left',fontsize=20)
-	ax1.legend(loc='best',fontsize=14,frameon=False)
+	ax1.set_title('A)',loc='left')
+	ax1.legend(loc='best',frameon=False)
 
-	ax2.set_xlabel('Fibril Strain (\%)',fontsize=16)
-	ax2.set_ylabel(r'$\varepsilon_D/\langle\psi_0^2\rangle$',fontsize=20)
+	ax2.set_xlabel('Fibril Strain (\%)')
+	ax2.set_ylabel(r'$\varepsilon_D/\langle\psi_0^2\rangle$')
 	ax2.set_xlim(0,10)
 	ax2.set_ylim(0,0.51)
-	ax2.legend(loc='best',fontsize=14,frameon=False)
-	ax2.set_title('B)',loc='left',fontsize=20)
+	ax2.legend(loc='best',frameon=False)
+	ax2.set_title('B)',loc='left')
 
-	ax2.text(6,0.475,r'$\zeta\to1^+$',fontsize=16,color='xkcd:purple')
-	ax2.text(6,0.09,r'$\zeta\to\infty$',fontsize=16,color='xkcd:red',rotation=15)
+	ax2.text(6,0.475,r'$\zeta\to1^+$',color='xkcd:purple')
+	ax2.text(6,0.09,r'$\zeta\to\infty$',color='xkcd:red',rotation=15)
 
-	ax1.tick_params(axis='x', labelsize=14)
-	ax1.tick_params(axis='y', labelsize=14)
-	ax2.tick_params(axis='x', labelsize=14)
-	ax2.tick_params(axis='y', labelsize=14)
+	ax1.tick_params(axis='x')
+	ax1.tick_params(axis='y')
+	ax2.tick_params(axis='x')
+	ax2.tick_params(axis='y')
 
-	plt.tight_layout(pad=0.5)
+	plt.tight_layout(pad=0)
 	plt.show()
 
 
