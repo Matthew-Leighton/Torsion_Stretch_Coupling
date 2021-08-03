@@ -35,32 +35,22 @@ E.~A. Makris, D.~J. Responte, N.~K. Paschos, J.~C. Hu, K.~A. Athanasiou,
   oxidase-induced collagen cross-linking, Proceedings of the National Academy
   of Sciences 111~(45) (2014) E4832--E4841.
 
-\bibitem{Depalle:2015}
-B.~Depalle, Z.~Qin, S.~J. Shefelbine, M.~J. Buehler,
-  \href{https://www.sciencedirect.com/science/article/pii/S175161611400201X}{Influence
-  of cross-link structure, density and mechanical properties in the mesoscale
-  deformation mechanisms of collagen fibrils}, Journal of the Mechanical
-  Behavior of Biomedical Materials 52 (2015) 1–13.
-\newblock \href {https://doi.org/10.1016/j.jmbbm.2014.07.008}
-  {\path{doi:10.1016/j.jmbbm.2014.07.008}}.
-\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S175161611400201X}
-
 \bibitem{Misof:1997}
 K.~Misof, G.~Rapp, P.~Fratzl, A new molecular model for collagen elasticity
   based on synchrotron x-ray scattering evidence, Biophysical Journal 72~(3)
   (1997) 1376--1381.
-
-\bibitem{Gautieri:2017}
-A.~Gautieri, F.~S. Passini, U.~Silv{\'a}n, M.~Guizar-Sicairos, G.~Carimati,
-  P.~Volpi, M.~Moretti, H.~Schoenhuber, A.~Redaelli, M.~Berli, et~al., Advanced
-  glycation end-products: {M}echanics of aged collagen from molecule to tissue,
-  Matrix Biology 59 (2017) 95--108.
 
 \bibitem{Aziz:2018}
 J.~Aziz, M.~F. Ahmad, M.~T. Rahman, N.~A. Yahya, J.~Czernuszka, Z.~Radzi, {AFM}
   analysis of collagen fibrils in expanded scalp tissue after anisotropic
   tissue expansion, International Journal of Biological Macromolecules 107
   (2018) 1030--1038.
+
+\bibitem{Gautieri:2017}
+A.~Gautieri, F.~S. Passini, U.~Silv{\'a}n, M.~Guizar-Sicairos, G.~Carimati,
+  P.~Volpi, M.~Moretti, H.~Schoenhuber, A.~Redaelli, M.~Berli, et~al., Advanced
+  glycation end-products: {M}echanics of aged collagen from molecule to tissue,
+  Matrix Biology 59 (2017) 95--108.
 
 \bibitem{Gachon:2020}
 E.~Gachon, P.~Mesquida, Stretching single collagen fibrils reveals nonlinear
@@ -163,17 +153,9 @@ I.~Kundler, H.~Finkelmann, Director reorientation via stripe-domains in nematic
 Github code,
   \url{https://github.com/Matthew-Leighton/Torsion_Stretch_Coupling}.
 
-\bibitem{Gupta:2010}
-H.~Gupta, J.~Seto, S.~Krauss, P.~Boesecke, H.~Screen, In situ multi-level
-  analysis of viscoelastic deformation mechanisms in tendon collagen, Journal
-  of structural biology 169~(2) (2010) 183--191.
-
-\bibitem{Puxkandl:2002}
-R.~Puxkandl, I.~Zizak, O.~Paris, J.~Keckes, W.~Tesch, S.~Bernstorff,
-  P.~Purslow, P.~Fratzl, Viscoelastic properties of collagen: synchrotron
-  radiation investigations and structural model, Philosophical Transactions of
-  the Royal Society of London. Series B: Biological Sciences 357~(1418) (2002)
-  191--197.
+\bibitem{Screen:2004}
+H.~Screen, D.~Bader, D.~Lee, J.~Shelton, Local strain measurement within
+  tendon, Strain 40~(4) (2004) 157--163.
 
 \bibitem{Fang:2012}
 M.~Fang, E.~L. Goldstein, A.~S. Turner, C.~M. Les, B.~G. Orr, G.~J. Fisher,
@@ -206,37 +188,24 @@ W.~Yang, V.~R. Sherman, B.~Gludovatz, E.~Schaible, P.~Stewart, R.~O. Ritchie,
   M.~A. Meyers, On the tear resistance of skin, Nature Communications 6~(1)
   (2015) 1--10.
 
-\bibitem{Almer:2005}
-J.~Almer, S.~Stock, Internal strains and stresses measured in cortical bone via
-  high-energy x-ray diffraction, Journal of Structural Biology 152~(1) (2005)
-  14–27.
-\newblock \href {https://doi.org/10.1016/j.jsb.2005.08.003}
-  {\path{doi:10.1016/j.jsb.2005.08.003}}.
+\bibitem{Quigley:2018}
+A.~S. Quigley, S.~Bancelin, D.~Deska-Gauthier, F.~L{\'e}gar{\'e}, L.~Kreplak,
+  S.~P. Veres, In tendons, differing physiological requirements lead to
+  functionally distinct nanostructures, Scientific Reports 8~(1) (2018) 1--14.
 
-\bibitem{Zimmermann:2011}
-E.~A. Zimmermann, E.~Schaible, H.~Bale, H.~D. Barth, S.~Y. Tang, P.~Reichert,
-  B.~Busse, T.~Alliston, J.~W. Ager, R.~O. Ritchie, Age-related changes in the
-  plasticity and toughness of human cortical bone at multiple length scales,
-  Proceedings of the National Academy of Sciences 108~(35) (2011)
-  14416–14421.
-\newblock \href {https://doi.org/10.1073/pnas.1107966108}
-  {\path{doi:10.1073/pnas.1107966108}}.
+\bibitem{Svensson:2013}
+R.~B. Svensson, H.~Mulder, V.~Kovanen, S.~P. Magnusson, Fracture mechanics of
+  collagen fibrils: {I}nfluence of natural cross-links, Biophysical Journal
+  104~(11) (2013) 2476--2484.
 
-\bibitem{Xi:2020}
-L.~Xi, Y.~Song, W.~Wu, Z.~Qu, J.~Wen, B.~Liao, R.~Tao, J.~Ge, D.~Fang,
-  Investigation of bone matrix composition, architecture and mechanical
-  properties reflect structure-function relationship of cortical bone in
-  glucocorticoid induced osteoporosis, Bone 136 (2020) 115334.
-\newblock \href {https://doi.org/10.1016/j.bone.2020.115334}
-  {\path{doi:10.1016/j.bone.2020.115334}}.
+\bibitem{Peacock:2019}
+C.~J. Peacock, L.~Kreplak, Nanomechanical mapping of single collagen fibrils
+  under tension, Nanoscale 11~(30) (2019) 14417--14425.
 
-\bibitem{Inamdar:2019}
-S.~R. Inamdar, E.~Barbieri, N.~J. Terrill, M.~M. Knight, H.~S. Gupta,
-  Proteoglycan degradation mimics static compression by altering the natural
-  gradients in fibrillar organisation in cartilage, Acta Biomaterialia 97
-  (2019) 437–450.
-\newblock \href {https://doi.org/10.1016/j.actbio.2019.07.055}
-  {\path{doi:10.1016/j.actbio.2019.07.055}}.
+\bibitem{Iqbal:2019}
+S.~A. Iqbal, D.~Deska-Gauthier, L.~Kreplak, Assessing collagen fibrils
+  molecular damage after a single stretch--release cycle, Soft Matter 15~(30)
+  (2019) 6237--6246.
 
 \bibitem{Fratzl:1998}
 P.~Fratzl, K.~Misof, I.~Zizak, G.~Rapp, H.~Amenitsch, S.~Bernstorff, Fibrillar
